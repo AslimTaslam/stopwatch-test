@@ -1,0 +1,8 @@
+<div class="timer-board">
+  <TimerBlock
+    v-for="timer of timers"
+    v-bind:timer="timer"
+    v-bind:status="timer.timerStatus"
+  />
+  <AddTimerBlock @add-timer="addTimer" />
+</div>

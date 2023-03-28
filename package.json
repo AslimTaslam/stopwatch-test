@@ -35,11 +35,16 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "quotes": [
+        "error",
+        "double"
+      ]
+    }
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions",
+    "last 1 versions",
     "not dead",
     "not ie 11"
   ]

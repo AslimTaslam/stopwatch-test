@@ -1,0 +1,35 @@
+<div
+  class="timer-block-bottom"
+  v-bind:class="{'timer-block-bottom_active': timer.timerStatus === 
+'running'}"
+>
+  <button
+    v-if="timer.timerStatus == 'stopped' || timer.timerStatus == 'paused'"
+    class="timer-block-bottom__button"
+    @click="$emit('change-status', 'running')"
+  >
+    <SvgIcon
+      name="svg-play"
+      v-bind:status="timer.timerStatus"
+    />
+  </button>
+  <button
+    v-else-if="timer.timerStatus == 'running'"
+    class="timer-block-bottom__button"
+    @click="$emit('change-status', 'paused')"
+  >
+    <SvgIcon
+      name="svg-pause"
+      v-bind:status="timer.timerStatus"
+    />
+  </button>
+  <button
+    class="timer-block-bottom__button"
+    @click="$emit('change-status', 'stopped')"
+  >
+    <SvgIcon
+      name="svg-stop"
+      v-bind:status="timer.timerStatus"
+    />
+  </button>
+</div>

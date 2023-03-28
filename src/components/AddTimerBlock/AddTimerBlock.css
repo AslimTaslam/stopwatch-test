@@ -1,0 +1,16 @@
+.add-timer-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 225px;
+  height: 120px;
+  background: #696969;
+  color: #9e9e9e;
+}
+
+.add-timer-block__button {
+  border: none;
+  width: max-content;
+  background: inherit;
+  cursor: pointer;
+}

@@ -1,0 +1,35 @@
+.timer-board {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 50px;
+  margin: 5px auto;
+  max-width: 225px;
+}
+@media (min-width: 320px) {
+  #app {
+    margin-top: 20px;
+  }
+  .timer-board {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 5px auto;
+    max-width: 225px;
+  }
+}
+
+@media (min-width: 768px) {
+  .timer-board {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 5px auto;
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .timer-board {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 786px;
+  }
+}

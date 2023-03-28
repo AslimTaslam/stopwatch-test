@@ -1,0 +1,10 @@
+<div class="timer-block">
+  <TimerBlockTop
+    v-bind:time="time"
+    v-bind:status="timer.timerStatus"
+  />
+  <TimerBlockBottom
+    v-bind:timer="timer"
+    v-on:change-status="changeStatus"
+  />
+</div>

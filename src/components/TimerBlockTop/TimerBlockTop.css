@@ -1,0 +1,16 @@
+.timer-block-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+
+.timer-block-top__value {
+  font-size: 22px;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.timer-block-top_active {
+  color: #fff;
+}
