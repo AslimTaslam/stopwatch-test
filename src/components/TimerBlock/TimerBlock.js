@@ -9,6 +9,8 @@ export default {
   },
   data() {
     return {
+      startTime: null,
+      milliseconds: 0,
       time: "0",
       interval: null,
     };
@@ -37,22 +39,33 @@ export default {
       }
     },
     start() {
-      this.interval = setInterval(() => {
-        if (this.timer.current.seconds === 60) {
-          this.timer.current.minutes += 1;
-          this.timer.current.seconds = 0;
-        }
-        if (this.timer.current.minutes === 60) {
-          this.timer.current.hours += 1;
-          this.timer.current.minutes = 0;
-        }
+      this.startTime = Date.now();
+      const instance = () => {
+        this.milliseconds += 100;
+        const diff = Date.now() - this.startTime - this.milliseconds;
 
-        this.timer.current.seconds += 1;
-        this.updateTime();
-      }, 1000);
+        if (this.milliseconds % 1000 === 0) {
+          if (this.timer.current.seconds === 59) {
+            this.timer.current.seconds = 0;
+            this.timer.current.minutes += 1;
+          }
+          if (this.timer.current.minutes === 60) {
+            this.timer.current.minutes = 0;
+            this.timer.current.hours += 1;
+          }
+
+          this.timer.current.seconds += 1;
+          this.updateTime();
+        }
+        this.interval = setTimeout(instance, 100 - diff);
+      };
+
+      this.interval = setTimeout(instance, 100);
     },
     stop() {
       this.timer.timerStatus = "stopped";
+      this.startTime = null;
+      this.milliseconds = 0;
       clearInterval(this.interval);
       this.timer.current.seconds = 0;
       this.timer.current.minutes = 0;
@@ -60,6 +73,8 @@ export default {
     },
     pause() {
       this.timer.timerStatus = "paused";
+      this.startTime = null;
+      this.milliseconds = 0;
       clearInterval(this.interval);
     },
   },
