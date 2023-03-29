@@ -2,10 +2,12 @@
   "name": "stopwatch-test",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://AslimTaslam.github.io/stopwatch-test/",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "core-js": "^3.8.3",

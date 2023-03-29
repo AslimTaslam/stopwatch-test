@@ -1,24 +1,29 @@
-# stopwatch-test
+# Stopwatch - test application
 
-## Project setup
-```
-npm install
-```
+Test application
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Example
 
-### Compiles and minifies for production
-```
-npm run build
-```
+![Example](https://github.com/AslimTaslam/stopwatch-test/blob/main/quickExample.png 'Stopwatch')
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Link
+
+Demo - https://aslimtaslam.github.io/stopwatch-test/
+
+## Technology
+
+- Vue
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm run serve`
+
+### `npm run build`
+
+### `npm run lint`
 
 ### Customize configuration
+
 See [Configuration Reference](https://cli.vuejs.org/config/).
