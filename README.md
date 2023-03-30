@@ -4,11 +4,7 @@ Test application
 
 ## Example
 
-![Example](https://github.com/AslimTaslam/stopwatch-test/blob/main/quickExample.png 'Stopwatch')
-
-## Link
-
-Demo - https://aslimtaslam.github.io/stopwatch-test/
+![Example](https://github.com/AslimTaslam/stopwatch-test/blob/master/quickExample.png 'Stopwatch')
 
 ## Technology
 
