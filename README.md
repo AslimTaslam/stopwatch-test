@@ -1,6 +1,6 @@
 # Stopwatch - test application
 
-Test application
+Test task for "ООО Студия Беляевых"
 
 ## Example
 
